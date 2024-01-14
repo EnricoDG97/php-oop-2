@@ -1,19 +1,23 @@
 <?php
 require_once __DIR__ . "/Category.php";
+require_once __DIR__ . "/../Traits/Weightable.php";
 
 class Product 
 {
+    use Weightable;
+
     public $name;
     protected $category;
     private $price;
     protected $availability;
 
-    public function __construct($_name, Category $category, $_price, $_availability)
+    public function __construct($_name, Category $category, $_price, $_availability, $_weight = 0)
     {
         $this->name = $_name;
         $this->category = $category;
         $this->setPrice($_price);
         $this->availability = $_availability;
+        $this->setWeight($_weight);
     }
 
     /**

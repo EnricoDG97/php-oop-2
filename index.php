@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/database.php';
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -18,27 +20,32 @@ require_once __DIR__ . '/database.php';
 
     <div class="container mt-5">
         <div class="row row-cols-3">
-            <?php foreach ($products as $product) { ?>
-                <div class="col mb-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">
-                                <?php echo $product->name ?>
-                            </div>
-                            <div class="card-text">
-                                <?php echo $product->getCategory()->getName(); ?>
-                                <br>
-                                Prezzo: <?php echo $product->getPrice(); ?>
-                                <br>
-                                Disponibilità: <?php echo $product->getAvailability(); ?>
-                                <br>
-                                <?php echo $product->getInfo(); ?>
-                        
+            <?php try { ?>
+                <?php foreach ($products as $product) { ?>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <?php echo $product->name ?>
+                                </div>
+                                <div class="card-text">
+                                    <?php echo $product->getCategory()->getName(); ?>
+                                    <br>
+                                    Prezzo: <?php echo $product->getPrice(); ?>
+                                    <br>
+                                    Disponibilità: <?php echo $product->getAvailability(); ?>
+                                    <br>
+                                    <?php echo $product->getInfo(); ?>
+                                    <br>
+                                    <?php echo $product->getWeight(); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            <?php } ?>
+                <?php } ?>
+            <?php } catch (Exception $e) {
+                echo 'Errore: ' . $e->getMessage();
+            } ?>
         </div>
     </div>
 
