@@ -35,4 +35,44 @@ class Product
             return false;
         }
     }
+
+    /**
+     * Get the value of category
+     */ 
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * Set the value of category
+     *
+     * @return  self
+     */ 
+    public function setCategory($category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of availability
+     */ 
+    public function getAvailability()
+    {
+        return $this->availability;
+    }
+
+    /**
+     * Set the value of availability
+     *
+     * @return  self
+     */ 
+    public function setAvailability($availability)
+    {
+        $this->availability = $availability;
+
+        return $this;
+    }
 }

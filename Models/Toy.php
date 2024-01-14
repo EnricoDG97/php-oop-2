@@ -51,4 +51,9 @@ class Toy extends Product {
 
         return $this;
     }
+
+    public function getInfo()
+    {
+        return 'Dimensioni: ' . $this->height . ' x ' . $this->width;
+    }
 }

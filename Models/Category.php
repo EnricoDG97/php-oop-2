@@ -1,8 +1,8 @@
 <?php
 
 class Category {
-    protected $name;
-    protected $icon;
+    public $name;
+    public $icon;
 
     public function __construct($_name, $_icon)
     {

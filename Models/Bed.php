@@ -30,4 +30,9 @@ class Bed extends Product {
 
         return $this;
     }
+
+    public function getInfo()
+    {
+        return 'Dimensioni: ' . $this->size;
+    }
 }
