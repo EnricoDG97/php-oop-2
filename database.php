@@ -14,7 +14,7 @@ $products = [
     new Food('MioCane', $categoryForDog, 19.90, 75, '2088-01-01', 7.3),
     new Toy('Osso Giocattolo', $categoryForDog, 9.50, 20, 5 . ' cm', 30 . ' cm', 1.0),
     new Bed('Cuccia XXL', $categoryForDog, 99.99, 5, 'XXL', 4.5),
-    new Food('Pollo in Salsa', $categoryForDog, 4.50, 25, '01-01-2039'),
+    new Food('Pollo in Salsa', $categoryForDog, 4.50, 25, '01-01-2039', 12),
     new Toy('Corda da Masticare', $categoryForDog, 7.25, 18, 20 . ' cm', 2 . ' cm'),
     new Bed('Lettiera per Gatto', $categoryForCat, 9.90, 50, 'L', 2.3),
     new Bed('Cuccia Ergonomica', $categoryForCat, 89.99, 8, 'M'),
@@ -38,4 +38,4 @@ $prod2 = new Product('MioCane', $categoryForDog, 19.90, 75, 5);
 // var_dump($prod1->setWeight(20));
 // var_dump($prod1->getWeight());
 
-var_dump($prod1, $prod2);
+// var_dump($prod1, $prod2);

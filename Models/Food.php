@@ -11,9 +11,6 @@ class Food extends Product {
         $this->setExpiration_date($_expiration_date);
     }
 
-    /**
-     * Set the value of expiration_date
-     */ 
     public function setExpiration_date($expiration_date)
     {
         $stringToDate = strtotime($expiration_date);
@@ -23,6 +20,11 @@ class Food extends Product {
         $formatted_date = date('Y-m-d', $stringToDate);
         $this->expiration_date = $formatted_date;
         return $this;
+    }
+
+    public function getExpirationDate()
+    {
+        return 'Data di Scadenza: ' . $this->expiration_date;
     }
 
     /**

@@ -26,7 +26,7 @@ require_once __DIR__ . '/database.php';
                         <div class="card">
                             <div class="card-body">
                                 <div class="card-title">
-                                    <?php echo $product->name ?>
+                                    <?php echo $product->name; ?>
                                 </div>
                                 <div class="card-text">
                                     <?php echo $product->getCategory()->getName(); ?>
